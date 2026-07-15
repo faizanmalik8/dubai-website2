@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://www.iptvdubai.com/sitemap.xml',
+    sitemap: 'https://iptvdubai.org/sitemap.xml',
   };
 }

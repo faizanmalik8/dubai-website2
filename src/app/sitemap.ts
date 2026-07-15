@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.iptvdubai.com';
+  const baseUrl = 'https://iptvdubai.org';
 
   return [
     {
