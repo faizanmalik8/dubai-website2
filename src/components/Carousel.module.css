@@ -1,0 +1,72 @@
+.section {
+  padding: 6rem 0;
+  background-color: var(--color-card-bg);
+  overflow: hidden;
+}
+
+.header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  color: var(--color-text-secondary);
+  font-size: 1.1rem;
+}
+
+.carouselWrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.carouselTrack {
+  display: flex;
+  width: max-content;
+  animation: scroll 60s linear infinite;
+  gap: 1.5rem;
+  padding: 0 0.75rem;
+}
+
+.carouselTrack:hover {
+  animation-play-state: paused;
+}
+
+.imageCard {
+  position: relative;
+  width: 400px;
+  height: 250px;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  flex-shrink: 0;
+}
+
+.imageCard img {
+  object-fit: cover;
+}
+
+.btnWrapper {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-50% - 0.75rem)); } /* Shift by exactly half so it loops perfectly */
+}
+
+@media (max-width: 768px) {
+  .imageCard {
+    width: 280px;
+    height: 180px;
+  }
+}

@@ -1,0 +1,37 @@
+.section {
+  padding: 4rem 0;
+  background-color: var(--color-bg);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.imageWrapper img {
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.imageWrapper:hover img {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .imageWrapper {
+    height: 250px;
+  }
+}

@@ -1,0 +1,98 @@
+.section {
+  padding: 6rem 0;
+  background-color: var(--color-card-bg);
+}
+
+.header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  color: var(--color-text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.stepper {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.stepper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 24px;
+  width: 2px;
+  background-color: var(--color-border);
+  z-index: 1;
+}
+
+.step {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 2;
+}
+
+.step:last-child {
+  margin-bottom: 0;
+}
+
+.stepNumber {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--color-bg);
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 8px var(--color-card-bg); /* to cover the line behind it */
+  transition: var(--transition);
+}
+
+.step:hover .stepNumber {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.stepContent {
+  background-color: var(--color-bg);
+  padding: 1.5rem 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+  flex-grow: 1;
+  font-size: 1.05rem;
+  color: var(--color-text-primary);
+  font-weight: 500;
+}
+
+@media (max-width: 576px) {
+  .stepper::before {
+    left: 20px;
+  }
+  .stepNumber {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+  .step {
+    gap: 1rem;
+  }
+}
