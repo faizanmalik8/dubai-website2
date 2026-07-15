@@ -113,3 +113,13 @@
     transform: translateY(0);
   }
 }
+
+@media (max-width: 768px) {
+  .btnPrimary {
+    font-size: 0.85rem;
+    padding: 0.8rem 1rem;
+    white-space: nowrap;
+    width: 100%;
+    justify-content: center;
+  }
+}

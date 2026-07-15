@@ -4,7 +4,7 @@ import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 import { useCountUp } from '../hooks/useCountUp';
 
 export default function Stats() {
-  const { targetRef, isIntersecting } = useIntersectionObserver({ threshold: 0.6 });
+  const { targetRef, isIntersecting } = useIntersectionObserver({ threshold: 0.1 });
 
   const channelsCount = useCountUp(30000, 2500, isIntersecting);
   const moviesCount = useCountUp(200000, 2500, isIntersecting);
